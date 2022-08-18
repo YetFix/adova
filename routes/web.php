@@ -28,9 +28,10 @@ Auth::routes([
     'verify' => false, // Email Verification Routes...
   ]);
   Route::get('/clear',function(){
-    
+       
+      Artisan::call('migrate:fresh');
       Artisan::call('optimize:clear');
-  
+    
       return "done";
       
   });
