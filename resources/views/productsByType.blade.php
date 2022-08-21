@@ -31,16 +31,16 @@
                         <a href="/f/products">
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                            
-                           <label class="custom-control-label" for="price-all">All Categories</label>
-                           <span class="badge border font-weight-normal">{{$categories->count()}}</span>
+                           <label class="custom-control-label" for="price-all" style="color:black">All Categories</label>
+                           <span class="badge border font-weight-normal" style="color:black">{{$categories->count()}}</span>
                        </div>
                         </a>
                         @foreach($categories as $category)
                             <a href="/products/category/{{$category->id}}">
                             <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                                 
-                                <label class="custom-control-label" for="price-1">{{$category->name}}</label>
-                                <span class="badge border font-weight-normal">{{$category->products->count()}}</span>
+                                <label class="custom-control-label" for="price-1" style="color:black">{{$category->name}}</label>
+                                <span class="badge border font-weight-normal" style="color:black">{{$category->products->count()}}</span>
                             </div>
                             </a>
                         @endforeach
@@ -80,17 +80,16 @@
                         <a href="/f/products/{{$product->id}}">
                             <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                                 <div class="product-item bg-light mb-4">
-                                    <div class="product-img position-relative overflow-hidden">
-                                        <?php  $property_images = explode('|',$product->images);?>
+                                    <div class="product-img position-relative ">
+                                    <?php  $images = json_decode($product->images);  
+                                        ?>
                                     
-                                        <img src="{{ asset(''. $property_images[0]) }}" class="img-fluid w-100" style="height:300px;" alt="">   
+                                        <img src="/product_images/{{$images[0]}}" class="img-fluid w-100" style="height:300px;" alt="">   
                                         
                                     </div>
-                                    <div class="text-center py-4">
+                                    <div class="text-center py-4" style="display:none">
                                         <a class="h6 text-decoration-none text-truncate" href="">{{$product->name}}</a>
-                                        <div class="d-flex align-items-center justify-content-center mt-2">
-                                            <h5>{{$product->price}} tk.</h5>
-                                        </div>
+                                       
                                        
                                     </div>
                                 </div>

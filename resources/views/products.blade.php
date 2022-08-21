@@ -77,22 +77,20 @@
                         <a href="/f/products/{{$product->id}}">
                             <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                                 <div class="product-item bg-light mb-4">
-                                    <div class="product-img position-relative overflow-hidden">
+                                    <div class="product-img position-relative ">
                                         <?php  $images = json_decode($product->images);  
                                         ?>
                                        
                                     
-                                        <img src="/product_images/{{$images[0]}}" class="img-fluid w-100" style="height:300px;" alt="">  
+                                        <img src="/product_images/{{$images[0]}}"  style="height:300px;width:300px;" alt="">  
                                         <div class="text-center py-4" style="position: absolute;
                                           top: 50%;
                                           left: 50%;
                                           transform: translate(-50%, -50%);">
-                                        <a class="h6 text-decoration-none text-truncate" href="/f/products/{{$product->id}}"><span style="color:white;font-size:30px;">{{$product->name}}</span></a>
-                                        <div class="d-flex align-items-center justify-content-center mt-2">
-                                            <h5 style="color:white">{{$product->price}} tk.</h5>
-                                        </div>
-                                      
-                                    </div>
+                                             <a class="h6 text-decoration-none text-truncate" href="/f/products/{{$product->id}}">
+                                                 <span style="color:white;font-size:30px;">{{$product->name}}</span></a>
+                                       
+                                         </div>
                                         
                                     </div>
                                     

@@ -20,7 +20,8 @@
                 <div class="owl-carousel portfolio-details-carousel">
                     @if(isset($sliders))
                     @foreach ($sliders as $slider )
-                        <img src="{{URL::asset('slidersimg')}}/{{$slider->image}}" class="img-fluid sld"  alt="">
+                        <img src="{{URL::asset('slidersimg')}}/{{$slider->image}}" class="img-fluid sld" 
+                        style=" object-fit:fill;"  alt="">
                     @endforeach
                     @endif
                 </div>

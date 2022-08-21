@@ -15,7 +15,7 @@
 
                 <div class="section-title">
                     <h2>About</h2>
-                    <h3>Find Out More <span>About Us</span></h3>
+                    <!-- <h3>Find Out More <span>About Us</span></h3> -->
                     <p>Adova Pharmaceuticals Limited is one of the fastest growing manufacturer of Animal Health Care
                         products under Pharmaceuticals sector in Bangladesh.</p>
                 </div>

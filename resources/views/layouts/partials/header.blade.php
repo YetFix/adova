@@ -34,36 +34,37 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <li><a href="/" style="text-decoration:none;">Home</a></li>
-                    <li class="drop-down "><a href="" style="text-decoration:none;">About</a>
+                    <li><a href="/" style="text-decoration:none; font-size:18px;">Home</a></li>
+                    <li class="drop-down "><a href="" style="text-decoration:none; font-size:18px;">About</a>
                         <ul>
-                            <li><a href="/f/what-we-do" style="text-decoration:none;">What we do</a></li>
-                            <li><a href="/f/who-we-are" style="text-decoration:none;">Who we are</a></li>
-                            <li><a href="/f/profile" style="text-decoration:none;">Company Profile</a></li>
+                            <li><a href="/f/what-we-do" style="text-decoration:none; font-size:18px;">What we do</a></li>
+                           
+                            <li><a href="/f/profile" style="text-decoration:none; font-size:18px;">Company Profile</a></li>
                         </ul>
                     </li>
                     
-                    <li class="drop-down"><a href="{{route('f.product')}}" style="text-decoration:none;">Products</a>
+                    <li class="drop-down"><a href="{{route('f.product')}}" style="text-decoration:none; font-size:18px;">Products</a>
                         <ul>
                             @foreach($categories as $category)
-                            <li class="drop-down"><a href="/products/category/{{$category->id}}" style="text-decoration:none;">{{$category->name}}</a>
+                            <li class="drop-down"><a href="/products/category/{{$category->id}}" 
+                            style="text-decoration:none;font-size:18px;">{{$category->name}}</a>
                             </li>
                             @endforeach
                             
                         </ul>
                     </li>
-                    <li class="drop-down"><a href="{{route('f.product')}}" style="text-decoration:none;">Facilities</a>
+                    <li class="drop-down"><a href="{{route('f.product')}}" style="text-decoration:none;font-size:18px;">Facilities</a>
                         <ul>
-                            <li class="drop-down"><a href="/f/manufacturing" style="text-decoration:none;">Manufacturing</a>
+                            <li class="drop-down"><a href="/f/manufacturing" style="text-decoration:none;font-size:18px;">Manufacturing</a>
                             </li>  
-                            <li class="drop-down"><a href="/f/qa" style="text-decoration:none;">Quality Assurance</a>
+                            <li class="drop-down"><a href="/f/qa" style="text-decoration:none;font-size:18px;">Quality Assurance</a>
                             </li> 
                            
                         </ul>
                     </li>
-                    <li><a href="/f/team" style="text-decoration:none;">Management</a></li>
-                    <li><a href="/f/gallery" style="text-decoration:none;">Gallery</a></li>
-                    <li><a href="/f/contact" style="text-decoration:none;">Contact</a></li>
+                    <li><a href="/f/team" style="text-decoration:none;font-size:18px;">Management</a></li>
+                    <li><a href="/f/gallery" style="text-decoration:none;font-size:18px;">Gallery</a></li>
+                    <li><a href="/f/contact" style="text-decoration:none;font-size:18px;">Contact</a></li>
 
                 </ul>
             </nav><!-- .nav-menu -->
