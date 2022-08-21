@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Slider;
 use App\Models\Product;
 use App\Models\Category;
-use App\Models\Settings;
 use App\Models\Team;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SliderController;
@@ -37,66 +36,66 @@ Auth::routes([
   });
 
 Route::get('/', function () {
-    $settings= Settings::get();
+  
     $categories= Category::get();
     $sliders = Slider::get();
     $teams = Team::get();
     $uproducts=Product::where('type','=','upcoming')->paginate(5);
     $products=Product::where('type','=','recent')->paginate(5);
-    return view('welcome',compact('sliders','categories','products','settings','teams','products','uproducts'));
+    return view('welcome',compact('sliders','categories','products','teams','products','uproducts'));
 });
 Route::get('/f/contact', function(){
-  $settings= Settings::get();
+ 
   $categories= Category::get();
-  return view('contact',compact('settings','categories'));
+  return view('contact',compact('categories'));
 });
 Route::get('/f/gallery', function(){
-  $settings= Settings::get();
+ 
   $categories= Category::get();
   $sliders = Slider::get();
   $products = Product::get();
-  return view('gallery',compact('settings','categories','products','sliders'));
+  return view('gallery',compact('categories','products','sliders'));
 });
 Route::get('/f/team', function(){
-  $settings= Settings::get();
+ 
   $categories= Category::get();
   $teams = Team::get();
  
-  return view('team',compact('settings','categories','teams'));
+  return view('team',compact('categories','teams'));
 });
 Route::get('/f/engineering', function(){
-  $settings= Settings::get();
+  
   $categories= Category::get();
-  return view('engineering',compact('settings','categories'));
+  return view('engineering',compact('categories'));
 });
 Route::get('/f/who-we-are', function(){
-  $settings= Settings::get();
+ 
   $categories= Category::get();
   $teams = Team::get();
-  return view('who',compact('settings','categories','teams'));
+  return view('who',compact('categories','teams'));
 });
 Route::get('/f/profile', function(){
-  $settings= Settings::get();
+ 
   $categories= Category::get();
 
-  return view('profile',compact('settings','categories'));
+  return view('profile',compact('categories'));
 });
 Route::get('/f/manufacturing', function(){
-  $settings= Settings::get();
+  
   $categories= Category::get();
 
   return view('manufacturing',compact('settings','categories'));
 });
 Route::get('/f/qa', function(){
-  $settings= Settings::get();
+
   $categories= Category::get();
 
-  return view('qa',compact('settings','categories'));
+  return view('qa',compact('categories'));
 });
 Route::get('/f/what-we-do', function(){
-  $settings= Settings::get();
+  
   $categories= Category::get();
-  return view('what',compact('settings','categories'));
+  return view('what',compact('categories'));
 });
 
 Route::get('/f/products', [App\Http\Controllers\ShopController::class, 'shop'])->name('f.product');
